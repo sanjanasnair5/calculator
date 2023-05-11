@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  
+  	body{
+  		background-color: #7D1B7E;
+  	}
+  	.cal{
+
+  		margin-top: 10%;
+  		margin-left: 40%;
+  	}
+  .inpu{
+  		
+  		margin-top: 3%;
+  		margin-left: 40%;
+  
+
+  	}
+  	.vv{
+  			margin-left: 40%;
+  			padding-top: 3%;
+  	}
+  	.oter{
+  		margin-left: 30%;
+  		padding-top: 3%;
+  	}
+  	.ctr{
+  		margin-left: 40%;
+  	}
+  </style>
+</head>
+<body>
+	<div class=cal>
+	<h1>CALCULATOR</h1>
+</div>
+
+	<div class=inpu >
+	<input type="text" id="n1" placeholder="Number 1"size="30" style="color: blue"><br>
+</div>
+<div class="vv">
+	<input type="text" id="n2" placeholder="Number 2" size="30"><br>
+</div>
+
+
+<div class="oter">
+	<h4 class="text-white"><label>Calculate</label></h4>
+	<button><select id="s" class="btn-secondary"></button>
+		<option>+</option>
+	    <option>-</option>
+	    <option>*</option>
+        <option>/</option>
+    </select>
+</div>
+<div class="ctr">
+    <button onclick="calculate();" value="answer" class="btn-primary">answer</button>
+    <input type="text" id="res" placeholder="result" readonly/>
+    
+
+</div>
+
+    <script>
+    	function calculate()
+    	{
+    		
+    		var oper=document.getElementById('s').value;
+    		if(oper==='+')
+    		{
+    			add();
+    		}
+
+    			if(oper==='-')
+    		{
+    			sub();
+    		}
+    		
+    			if(oper==='*')
+    		{
+    			mult();
+    		}
+    		
+    	    if(oper==='/')
+    	    {
+    	    	dive();
+    	    }
+    	    function add()
+    	    {
+            var a=parseInt(document.getElementById('n1').value);
+    		var b=parseInt(document.getElementById('n2').value);
+    		document.getElementById('res') .value=a+b;
+    		}
+    		  function sub()
+    	    {
+            var a=parseInt(document.getElementById('n1').value);
+    		var b=parseInt(document.getElementById('n2').value);
+    		document.getElementById('res') .value=a-b;
+    		}
+    		  function mult()
+    	    {
+            var a=parseInt(document.getElementById('n1').value);
+    		var b=parseInt(document.getElementById('n2').value);
+    		document.getElementById('res') .value=a*b;
+    		}
+    		  function dive()
+    	    {
+            var a=parseInt(document.getElementById('n1').value);
+    		var b=parseInt(document.getElementById('n2').value);
+    		document.getElementById('res') .value=a/b;
+    		}   	    
+
+    		
+
+    		
+
+    	}
+    </script>
+
+</body>
+</html>
